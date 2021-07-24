@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <title>Mirresi</title>
+    <style type="text/css">
+      .lead{
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+        font-size: 30px;
+        color: white;
+        background-color: #05386B;
+        margin-top: 30px;
+      }
+      .form-panel{
+        margin-top: 85px;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+        border-radius: 12px;
+        background-color: white;
+        margin-bottom: 100px;
+      }
+      button{
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #edf5e1">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-weight: bold; color: #05386B; font-size: 25px;"><i class="fas fa-box-open mr-2"></i>MIRRESI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#" style="font-weight: bold; color: #05386B; font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </nav>  
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 form-panel">
+            <div class="container">
+              <p class="lead">Tracking paket kamu disini</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>Pilih Ekspedisi</label>
+                      <select id="ekspedisi" class="custom-select">
+                        <option selected>Ekspedisi</option>
+                        <option value="jnt">JNT</option>
+                        <option value="jne">JNE</option>
+                        <option value="pos">POS Indonesia</option>
+                        <option value="sicepat">SiCepat</option>
+                        <option value="tiki">Tiki</option>
+                        <option value="anteraja">AnterAja</option>
+                        <option value="wahana">Wahana</option>
+                        <option value="ninja">Ninja</option>
+                        <option value="lion">Lion</option>
+                        <option value="pcp">PCP Express</option>
+                        <option value="jet">JET Express</option>
+                        <option value="rex">REX Express</option>
+                        <option value="first">First Logistics</option>
+                        <option value="ide">ID Express</option>
+                        <option value="spx">Shopee Express</option>
+                        <option value="kgx">KGXpress</option>
+                        <option value="sap">SAP Express</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Nomor Resi</label>
+                      <input type="text" id="search-input" class="form-control" placeholder="Nomor Resi">
+                    </div>
+                    <center>
+                      <button type="submit" id="search-button" class="btn" style="background-color: #05386B; color: white;">Lacak</button>
+                    </center>  
+                  </div>
+                  <div class="col-lg-6" id="hasil">
+                    <p class="tulisan" style="text-align: center; margin-top: 75px; margin-bottom: 75px;">Masukan resi untuk tracking paket kamu</p>
+                  </div>
+                  <div class="col-lg-6" id="hasil2">
+                    <!-- <div class="card" style="margin-bottom: 30px;">
+                      <div class="card-body">
+                        <table class="table table-hover">
+                          <tbody>
+                            <tr>
+                              <td>STATUS</td>
+                              <td>DELIVERED</td>
+                            </tr>
+                            <tr>
+                              <td>POSISI TERAKHIR</td>
+                              <td>DELIVERED</td>
+                            </tr>
+                          </tbody>
+                          <tbody>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                            <tr>
+                              <td>2021-07-14 05:58:35 SURABAYA</td>
+                              <td>TELAH TIBA: DROP POINT [SURABAYA] DARI [SUB_GATEWAY]</td>
+                            </tr>
+                          </tbody>
+                        </table>    
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      
+      <footer class="page-footer font-small blue" >
+       <div class="footer-copyright text-center py-3" style="font-weight: bold;">© 2021 Copyright | built by.
+          <a href="http://instgram.com/mirryusuf" style="color: #05386B; ">Muhamad Amir Rudin Yusup</a>
+       </div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
